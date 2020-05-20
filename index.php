@@ -1,11 +1,13 @@
 <?php
-   $accessToken = "B56+JXIosMFlP8aLyUw3hq1DEQGoEQcnKx3GKi0zhCwafgCyuiOWPiK/6SvUnMD1SCMnZIgVykAm+co7h7m4ZVTNukGksmfW7NMUaZkmtm4YkZX1PSlhMjjDyRkiyraahTkTKhp9yNaEgM8XKfbynAdB04t89/1O/w1cDnyilFU=";
-   $content = file_get_contents('php://input');
+   $accessToken = "B56+JXIosMFlP8aLyUw3hq1DEQGoEQcnKx3GKi0zhCwafgCyuiOWPiK/6SvUnMD1SCMnZIgVykAm+co7h7m4ZVTNukGksmfW7NMUaZkmtm4YkZX1PSlhMjjDyRkiyraahTkTKhp9yNaEgM8XKfbynAdB04t89/1O/w1cDnyilFU=";//copy ข้อความ Channel access token ตอนที่ตั้งค่า
+$content = file_get_contents('php://input');
    $arrayJson = json_decode($content, true);
-   $arrayHeader = array();
+$arrayHeader = array();
    $arrayHeader[] = "Content-Type: application/json";
    $arrayHeader[] = "Authorization: Bearer {$accessToken}";
- $message = $arrayJson['events'][0]['message']['text'];
+//รับข้อความจากผู้ใช้
+   $message = $arrayJson['events'][0]['message']['text'];
+//รับ id ว่ามาจากไหน
    if(isset($arrayJson['events'][0]['source']['userId']){
       $id = $arrayJson['events'][0]['source']['userId'];
    }
@@ -15,7 +17,8 @@
    else if(isset($arrayJson['events'][0]['source']['room'])){
       $id = $arrayJson['events'][0]['source']['room'];
    }
-      if($message == "สวัสดี"){
+#ตัวอย่าง Message Type "Text + Sticker"
+   if($message == "สวัสดี"){
       $arrayPostData['to'] = $id;
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
@@ -23,10 +26,10 @@
       $arrayPostData['messages'][1]['packageId'] = "2";
       $arrayPostData['messages'][1]['stickerId'] = "34";
       pushMsg($arrayHeader,$arrayPostData);
-      }
-   function pushMsg($arrayHeader,$arrayPostData){
-      $strUrl = "https://api.line.me/v2/bot/message/broadcast";
-      $ch = curl_init();
+   }
+function pushMsg($arrayHeader,$arrayPostData){
+      $strUrl = "https://api.line.me/v2/bot/message/push";
+$ch = curl_init();
       curl_setopt($ch, CURLOPT_URL,$strUrl);
       curl_setopt($ch, CURLOPT_HEADER, false);
       curl_setopt($ch, CURLOPT_POST, true);
@@ -37,5 +40,5 @@
       $result = curl_exec($ch);
       curl_close ($ch);
    }
-   exit;
+exit;
 ?>
