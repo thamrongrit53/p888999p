@@ -5,20 +5,15 @@ $content = file_get_contents('php://input');
 $arrayHeader = array();
    $arrayHeader[] = "Content-Type: application/json";
    $arrayHeader[] = "Authorization: Bearer {$accessToken}";
-//รับข้อความจากผู้ใช้
+
    $message = $arrayJson['events'][0]['message']['text'];
-//รับ id ว่ามาจากไหน
-   if(isset($arrayJson['events'][0]['source']['userId']){
-      $id = $arrayJson['events'][0]['source']['userId'];
-   }
-   else if(isset($arrayJson['events'][0]['source']['groupId'])){
+   if(isset($arrayJson['events'][0]['source']['groupId'])){
       $id = $arrayJson['events'][0]['source']['groupId'];
    }
    else if(isset($arrayJson['events'][0]['source']['room'])){
       $id = $arrayJson['events'][0]['source']['room'];
    }
-#ตัวอย่าง Message Type "Text + Sticker"
-   if($message == "สวัสดี"){
+
       $arrayPostData['to'] = $id;
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
@@ -26,7 +21,7 @@ $arrayHeader = array();
       $arrayPostData['messages'][1]['packageId'] = "2";
       $arrayPostData['messages'][1]['stickerId'] = "34";
       pushMsg($arrayHeader,$arrayPostData);
-   }
+ 
 function pushMsg($arrayHeader,$arrayPostData){
       $strUrl = "https://api.line.me/v2/bot/message/push";
 $ch = curl_init();
