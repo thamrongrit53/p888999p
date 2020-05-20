@@ -6,7 +6,7 @@
    $arrayHeader[] = "Content-Type: application/json";
    $arrayHeader[] = "Authorization: Bearer {$accessToken}";
 
-      $arrayPostData['to'] = $id;
+      $arrayPostData['to'] = $group;
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
       $arrayPostData['messages'][1]['type'] = "sticker";
