@@ -6,15 +6,15 @@ $arrayHeader = array();
    $arrayHeader[] = "Content-Type: application/json";
    $arrayHeader[] = "Authorization: Bearer {$accessToken}";
 
-   $message = $arrayJson['events'][0]['message']['text'];
-   if(isset($arrayJson['events'][0]['source']['groupId'])){
-      $id = $arrayJson['events'][0]['source']['groupId'];
-   }
-   else if(isset($arrayJson['events'][0]['source']['room'])){
-      $id = $arrayJson['events'][0]['source']['room'];
-   }
+//    $message = $arrayJson['events'][0]['message']['text'];
+//    if(isset($arrayJson['events'][0]['source']['groupId'])){
+//       $id = $arrayJson['events'][0]['source']['groupId'];
+//    }
+//    else if(isset($arrayJson['events'][0]['source']['room'])){
+//       $id = $arrayJson['events'][0]['source']['room'];
+//    }
 
-      $arrayPostData['to'] = $id;
+      $arrayPostData['to'] = "C40a0888cfb8018cf6263bd8529e9828d";
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = $id;
 
