@@ -16,7 +16,7 @@ $arrayHeader = array();
 
       $arrayPostData['to'] = "C40a0888cfb8018cf6263bd8529e9828d";
       $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = $id;
+      $arrayPostData['messages'][0]['text'] = "Test broadcast line";
 
       pushMsg($arrayHeader,$arrayPostData);
  
