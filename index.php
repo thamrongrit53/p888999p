@@ -13,7 +13,7 @@ $arrayHeader = array();
 //    else if(isset($arrayJson['events'][0]['source']['room'])){
 //       $id = $arrayJson['events'][0]['source']['room'];
 //    }
-  =$F_id= $_GET["1"];
+  $F_id= $_GET["1"];
    if ( $F_id == "1") {
       $jsonFlex ='{
     "id":"C40a0888cfb8018cf6263bd8529e9828d",
