@@ -17,15 +17,10 @@ $arrayHeader = array();
    if ( $F_id == "1") {
       $jsonFlex ='{
     "id":"C40a0888cfb8018cf6263bd8529e9828d",
-    "messages":[
-      "contents": {
+    "messages":[ {
             "type":"text",
             "text":"Hello, user"
-        },
-        {
-            "type":"text",
-            "text":"May I help you?"
-        }
+        }  
     ]
 }';
    } else {
