@@ -15,7 +15,8 @@ $arrayHeader = array();
 //    }
 $jsonFlex ='{"to": "C40a0888cfb8018cf6263bd8529e9828d",
   "messages": [
-   {
+   { "type": "flex",
+      "altText": "Flex Message",
   "type": "bubble",
   "hero": {
     "type": "image",
