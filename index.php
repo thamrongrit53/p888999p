@@ -18,7 +18,7 @@ $arrayHeader = array();
       $jsonFlex ='{
     "id":"C40a0888cfb8018cf6263bd8529e9828d",
     "messages":[
-        {
+      "contents": {
             "type":"text",
             "text":"Hello, user"
         },
