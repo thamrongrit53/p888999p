@@ -13,15 +13,20 @@ $arrayHeader = array();
 //    else if(isset($arrayJson['events'][0]['source']['room'])){
 //       $id = $arrayJson['events'][0]['source']['room'];
 //    }
+$text ="test";
+$messages = [
+'type' => 'text',
+'text' => $text
+];
+
   $F_id= $_GET["1"];
    if ( $F_id == "1") {
-      $jsonFlex ='{
-    "id":"C40a0888cfb8018cf6263bd8529e9828d",
-    "messages":[ 
-            "type":"text",
-            "text":"Hello, user" 
-    ]
-}';
+    $id="C40a0888cfb8018cf6263bd8529e9828d",
+      $data = [
+'id' => $id,
+'messages' => [$messages],
+];
+     $jsonFlex = json_encode($data);
    } else {
    $jsonFlex ='{"to": "C40a0888cfb8018cf6263bd8529e9828d",
   "messages": [
@@ -190,6 +195,7 @@ $arrayHeader = array();
       pushMsg($arrayHeader,$jsonFlex);
  
 function pushMsg($arrayHeader,$jsonFlex){
+   
       $strUrl = "https://api.line.me/v2/bot/message/push";
 $ch = curl_init();
       curl_setopt($ch, CURLOPT_URL,$strUrl);
