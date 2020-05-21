@@ -13,7 +13,7 @@ $arrayHeader = array();
 //    else if(isset($arrayJson['events'][0]['source']['room'])){
 //       $id = $arrayJson['events'][0]['source']['room'];
 //    }
-$jsonFlex ={"to": "C40a0888cfb8018cf6263bd8529e9828d",
+$jsonFlex ='{"to": "C40a0888cfb8018cf6263bd8529e9828d",
   "messages": [
     {
       "type": "flex",
@@ -37,7 +37,7 @@ $jsonFlex ={"to": "C40a0888cfb8018cf6263bd8529e9828d",
       }
     }
   ]
-};
+}';
       // $arrayPostData['to'] = "C40a0888cfb8018cf6263bd8529e9828d";
       // $arrayPostData['messages'][0]['type'] =$jsonFlex;
      
