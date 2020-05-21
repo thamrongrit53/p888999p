@@ -13,20 +13,13 @@ $arrayHeader = array();
 //    else if(isset($arrayJson['events'][0]['source']['room'])){
 //       $id = $arrayJson['events'][0]['source']['room'];
 //    }
-$text ="test";
-$messages = [
-'type' => 'text',
-'text' => $text
-];
-
+ $id="C40a0888cfb8018cf6263bd8529e9828d";
   $F_id= $_GET["1"];
    if ( $F_id == "1") {
-    $id="C40a0888cfb8018cf6263bd8529e9828d",
-      $data = [
-'id' => $id,
-'messages' => [$messages],
-];
-     $jsonFlex = json_encode($data);
+      $arrayPostData['to'] = $id;
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
+     $jsonFlex = json_encode($arrayPostData);
    } else {
    $jsonFlex ='{"to": "C40a0888cfb8018cf6263bd8529e9828d",
   "messages": [
