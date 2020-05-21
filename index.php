@@ -136,7 +136,7 @@ $jsonFlex =
       // $arrayPostData['messages'][0]['type'] =$jsonFlex;
      
 
-      pushMsg($arrayHeader,$arrayPostData);
+      pushMsg($arrayHeader,$jsonFlex);
  
 function pushMsg($arrayHeader,$arrayPostData){
       $strUrl = "https://api.line.me/v2/bot/message/push";
