@@ -20,6 +20,7 @@ $arrayHeader = array();
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
      $jsonFlex = json_encode($arrayPostData);
+      echo $jsonFlex;
    } else {
    $jsonFlex ='{"to": "C40a0888cfb8018cf6263bd8529e9828d",
   "messages": [
