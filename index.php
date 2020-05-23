@@ -13,25 +13,19 @@ $arrayHeader = array();
 //    else if(isset($arrayJson['events'][0]['source']['room'])){
 //       $id = $arrayJson['events'][0]['source']['room'];
 //    }
- $id="C40a0888cfb8018cf6263bd8529e9828d";
-  $F_id= $_GET["1"];
-   if ( $F_id == "1") {
-      $jsonFlex ='{
-  "to": "C40a0888cfb8018cf6263bd8529e9828d",
-  "messages": [
-    {
-      "type": "text",
-      "text": "สวัสดีจ้าาา"
-    }
-  ]
-}'; 
-//       $arrayPostData['to'] = $id;
-//       $arrayPostData['messages'][0]['type'] = "text";
-//       $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
-//      $jsonFlex = json_encode($arrayPostData);
-      echo $jsonFlex;
-   } else {
-   $jsonFlex ='{"to": "C40a0888cfb8018cf6263bd8529e9828d",
+$f_id =$_GET["id"];
+if($f_id == "1"){
+  $jsonFlex ='{
+    "to": "C40a0888cfb8018cf6263bd8529e9828d",
+    "messages": [
+      {
+        "type": "text",
+        "text": "สวัสดีจ้าาา"
+      }
+    ]
+  }'; 
+}elseif($f_id == "2"){
+$jsonFlex ='{"to": "C40a0888cfb8018cf6263bd8529e9828d",
   "messages": [
    { "type": "flex",
       "altText": "Flex Message",
@@ -188,8 +182,9 @@ $arrayHeader = array();
 }
   ]
 }';
+
 }
-   
+
 
       // $arrayPostData['to'] = "C40a0888cfb8018cf6263bd8529e9828d";
       // $arrayPostData['messages'][0]['type'] =$jsonFlex;
@@ -198,7 +193,6 @@ $arrayHeader = array();
       pushMsg($arrayHeader,$jsonFlex);
  
 function pushMsg($arrayHeader,$jsonFlex){
-   
       $strUrl = "https://api.line.me/v2/bot/message/push";
 $ch = curl_init();
       curl_setopt($ch, CURLOPT_URL,$strUrl);
@@ -213,3 +207,26 @@ $ch = curl_init();
    }
 exit;
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>line</title>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+  <div class="col-md-12">
+  <form method="get" action="">
+    <input class="form-control" type="text" name="id">
+    <input class="form-control" type="text" name="text">
+  </form>
+  <a href="https://p888999p.herokuapp.com/?id=1">send text</a>
+  <a href="https://p888999p.herokuapp.com/?id=2">send flex messages</a>
+
+  </div>
+  </div>
+</div>
+
+</body>
+</html>
