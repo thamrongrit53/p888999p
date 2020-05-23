@@ -16,10 +16,19 @@ $arrayHeader = array();
  $id="C40a0888cfb8018cf6263bd8529e9828d";
   $F_id= $_GET["1"];
    if ( $F_id == "1") {
-      $arrayPostData['to'] = $id;
-      $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
-     $jsonFlex = json_encode($arrayPostData);
+      $jsonFlex ='{
+  "to": "C40a0888cfb8018cf6263bd8529e9828d",
+  "messages": [
+    {
+      "type": "text",
+      "text": "สวัสดีจ้าาา"
+    }
+  ]
+}'; 
+//       $arrayPostData['to'] = $id;
+//       $arrayPostData['messages'][0]['type'] = "text";
+//       $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
+//      $jsonFlex = json_encode($arrayPostData);
       echo $jsonFlex;
    } else {
    $jsonFlex ='{"to": "C40a0888cfb8018cf6263bd8529e9828d",
