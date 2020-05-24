@@ -10,17 +10,19 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
+<div class="container" style="margin-top: 20px;">
   <div class="row">
   <div class="col-md-12">
-  <form method="get" action="">
+   <h1>line</h1>
+  <form method="POST" action="index.php">
     <input class="form-control" type="text" name="id">
     <input class="form-control" type="text" name="text">
   </form>
-  <a href="https://p888999p.herokuapp.com/?id=1">send text</a>
-  <a href="https://p888999p.herokuapp.com/?id=2">send flex messages</a>
-
-  </div>
+<button type="button" class="btn btn-warning"><a href="https://p888999p.herokuapp.com/?id=2">send flex messages</a>
+</button>
+  <button type="button" class="btn btn-danger"><a href="https://p888999p.herokuapp.com/?id=1">send text</a>
+</button>
+  <button type="button" class="btn btn-dark"></button></div>
   </div>
 </div>
 
@@ -42,6 +44,10 @@ $arrayHeader = array();
 //    else if(isset($arrayJson['events'][0]['source']['room'])){
 //       $id = $arrayJson['events'][0]['source']['room'];
 //    }
+   $text = $_POST["text"];
+   $id = $_POST["id"];
+
+
 $f_id =$_GET["id"];
 if($f_id == "1"){
   $jsonFlex ='{
