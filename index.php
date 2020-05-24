@@ -1,3 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>line</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+  <div class="col-md-12">
+  <form method="get" action="">
+    <input class="form-control" type="text" name="id">
+    <input class="form-control" type="text" name="text">
+  </form>
+  <a href="https://p888999p.herokuapp.com/?id=1">send text</a>
+  <a href="https://p888999p.herokuapp.com/?id=2">send flex messages</a>
+
+  </div>
+  </div>
+</div>
+
+</body>
+</html>
+
 <?php
    $accessToken = "B56+JXIosMFlP8aLyUw3hq1DEQGoEQcnKx3GKi0zhCwafgCyuiOWPiK/6SvUnMD1SCMnZIgVykAm+co7h7m4ZVTNukGksmfW7NMUaZkmtm4YkZX1PSlhMjjDyRkiyraahTkTKhp9yNaEgM8XKfbynAdB04t89/1O/w1cDnyilFU=";//copy ข้อความ Channel access token ตอนที่ตั้งค่า
 $content = file_get_contents('php://input');
@@ -208,25 +237,4 @@ $ch = curl_init();
 exit;
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-   <title>line</title>
-</head>
-<body>
-<div class="container">
-  <div class="row">
-  <div class="col-md-12">
-  <form method="get" action="">
-    <input class="form-control" type="text" name="id">
-    <input class="form-control" type="text" name="text">
-  </form>
-  <a href="https://p888999p.herokuapp.com/?id=1">send text</a>
-  <a href="https://p888999p.herokuapp.com/?id=2">send flex messages</a>
 
-  </div>
-  </div>
-</div>
-
-</body>
-</html>
