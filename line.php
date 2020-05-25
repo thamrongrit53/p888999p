@@ -15,7 +15,7 @@ $arrayHeader = array();
 //       $id = $arrayJson['events'][0]['source']['room'];
 //    }
    $text = $_POST["text"];
-
+echo $text;
 $f_id =$_GET["id"];
 if($f_id == "1"){
   $jsonFlex ='{
