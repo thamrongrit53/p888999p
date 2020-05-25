@@ -14,10 +14,10 @@
   <div class="row">
   <div class="col-md-12">
    <h1>line</h1>
-  <form method="POST" action="line.php">
+  <form method="POST" action="line.php?id=1">
     <input class="form-control" type="text" name="text">  
      <br>
-     <button type="submit" class="btn btn-danger"><a href="https://p888999p.herokuapp.com/line.php?id=1">send text</a>
+     <button type="submit" value="Submit" class="btn btn-danger">
 </button>
   </form>
      <br>
