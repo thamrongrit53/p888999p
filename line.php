@@ -212,5 +212,5 @@ exit;
 ?>
 
 <script type="text/JavaScript">
-          setTimeout("location.href = 'https://p888999p.herokuapp.com/';",3000);
+          setTimeout("location.href = 'https://p888999p.herokuapp.com';",2000);
 </script>
