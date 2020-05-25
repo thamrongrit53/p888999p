@@ -14,7 +14,7 @@ $arrayHeader = array();
 //    else if(isset($arrayJson['events'][0]['source']['room'])){
 //       $id = $arrayJson['events'][0]['source']['room'];
 //    }
-   $text = $_POST["text"];
+ $text = $_POST["text"];
 echo $text;
 $f_id =$_GET["id"];
 if($f_id == "1"){
@@ -23,7 +23,7 @@ if($f_id == "1"){
     "messages": [
       {
         "type": "text",
-        "text": echo $text
+        "text": '.$text.'
       }
     ]
   }'; 
