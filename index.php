@@ -15,14 +15,13 @@
   <div class="col-md-12">
    <h1>line</h1>
   <form method="POST" action="index.php">
-    <input class="form-control" type="text" name="id">
-    <input class="form-control" type="text" name="text">
+    <input class="form-control" type="text" name="text">  
+     <button type="submit" class="btn btn-danger"><a href="https://p888999p.herokuapp.com/?id=1">send text</a>
+</button>
   </form>
 <button type="button" class="btn btn-warning"><a href="https://p888999p.herokuapp.com/?id=2">send flex messages</a>
 </button>
-  <button type="button" class="btn btn-danger"><a href="https://p888999p.herokuapp.com/?id=1">send text</a>
-</button>
-  <button type="button" class="btn btn-dark"></button></div>
+<!--   <button type="button" class="btn btn-dark"></button></div> -->
   </div>
 </div>
 
@@ -55,7 +54,7 @@ if($f_id == "1"){
     "messages": [
       {
         "type": "text",
-        "text": "สวัสดีจ้าาา"
+        "text": $text;
       }
     ]
   }'; 
