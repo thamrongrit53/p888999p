@@ -18,6 +18,7 @@
     <input class="form-control" type="text" name="text">  
      <br>
      <button type="submit" value="Submit" class="btn btn-danger">
+        send text
 </button>
   </form>
      <br>
