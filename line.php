@@ -23,7 +23,7 @@ if($f_id == "1"){
     "messages": [
       {
         "type": "text",
-        "text": 'echo $text'
+        "text": ".$text."
       }
     ]
   }'; 
