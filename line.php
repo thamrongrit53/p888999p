@@ -16,8 +16,24 @@ $arrayHeader = array();
 //    }
  $text = $_POST["text"];
 echo $text;
-  $flex ='
-  {
+ 
+$f_id =$_GET["id"];
+if($f_id == "1"){
+  $jsonFlex ='{
+    "to": "C40a0888cfb8018cf6263bd8529e9828d",
+    "messages": [
+      {
+        "type": "text",
+        "text": "'.$text.'"
+      }
+    ]
+  }'; 
+}elseif($f_id == "2"){
+$jsonFlex ='{"to": "C40a0888cfb8018cf6263bd8529e9828d",
+  "messages": [
+   { "type": "flex",
+      "altText": "Flex Message",
+      "contents": {
   "type": "bubble",
   "body": {
     "type": "box",
@@ -230,24 +246,6 @@ echo $text;
     }
   }
 }
-  ';
-$f_id =$_GET["id"];
-if($f_id == "1"){
-  $jsonFlex ='{
-    "to": "C40a0888cfb8018cf6263bd8529e9828d",
-    "messages": [
-      {
-        "type": "text",
-        "text": "'.$text.'"
-      }
-    ]
-  }'; 
-}elseif($f_id == "2"){
-$jsonFlex ='{"to": "C40a0888cfb8018cf6263bd8529e9828d",
-  "messages": [
-   { "type": "flex",
-      "altText": "Flex Message",
-      "contents": "'$flex'"
 }
   ]
 }';
