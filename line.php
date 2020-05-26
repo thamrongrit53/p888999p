@@ -33,9 +33,9 @@ $jsonFlex ='{"to": "C40a0888cfb8018cf6263bd8529e9828d",
   "messages": [
    { "type": "flex",
       "altText": "Flex Message",
-      "contents": {
+      "contents":{
   "type": "bubble",
-  "hero": {
+  "hero":{
     "type": "image",
     "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
     "size": "full",
